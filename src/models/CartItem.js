@@ -1,27 +1,33 @@
 class CartItem {
 
-  constructor(item, count=1) {
+  constructor(item, count = 1) {
     this.item = item;
     this.count = count;
   }
 
-  getBarcode (){
+  getBarcode() {
     return this.item.barcode;
   }
 
-  getName(){
+  getName() {
     return this.item.name;
   }
-  getUnit(){
+
+  getUnit() {
     return this.item.unit;
   }
-  getPrice(){
+
+  getPrice() {
     return this.item.price;
   }
-  getCount(){
+
+  getCount() {
     return this.count;
   }
 
+  getSubtotal() {
+    return this.getCount() * this.getPrice;
+  }
 
   static buildCartItems(tags, allItems) {
 

@@ -12,7 +12,7 @@ function printReceipt(tags) {
 
   const receipt = new Receipt(receiptItems);
 
-  const receiptText = Receipt.buildReceiptText(receipt);
+  const receiptText = receipt.buildText(receipt);
 
   console.log(receiptText);
 }

@@ -14,7 +14,7 @@ class Receipt {
   }
 
 
-  static buildReceiptText(receipt) {
+  buildText(receipt) {
 
     const formatMoney = (money) => {
       return money.toFixed(2);
@@ -33,8 +33,8 @@ class Receipt {
     return `***<没钱赚商店>收据***
 ${receiptItemsText}
 ----------------------
-总计：${formatMoney(receipt.total)}(元)
-节省：${formatMoney(receipt.savedTotal)}(元)
+总计：${formatMoney(this.total)}(元)
+节省：${formatMoney(this.savedTotal)}(元)
 **********************`;
   }
 
