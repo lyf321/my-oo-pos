@@ -30,9 +30,9 @@ class ReceiptItems {
 
     return cartItems.map(cartItem => {
 
-      const promotionType = findPromotionType(cartItem.item.barcode, allPromotions);
+      const promotionType = findPromotionType(cartItem.getBarcode(), allPromotions);
 
-      const {saved, subtotal} = discount(cartItem.count, cartItem.item.price, promotionType);
+      const {saved, subtotal} = discount(cartItem.getCount(), cartItem.getPrice(), promotionType);
 
       return new ReceiptItems(cartItem, saved, subtotal);
     });
