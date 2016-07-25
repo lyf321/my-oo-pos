@@ -1,3 +1,11 @@
-/**
- * Created by liyangfan on 16-7-25.
- */
+class Receipt {
+  constructor(cartItem, saved, subtotal) {
+    this.cartItem = cartItem;
+    this.saved = saved;
+    this.subtotal = subtotal;
+  }
+  
+}
+
+module.exports = Receipt;
+
