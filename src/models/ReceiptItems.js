@@ -5,6 +5,9 @@ class ReceiptItems {
     this.subtotal = subtotal;
   }
 
+  getBarcode(){
+    return this.cartItem.getBarcode();
+  }
   getName(){
     return this.cartItem.getName();
   }

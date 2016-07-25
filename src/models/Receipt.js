@@ -1,6 +1,6 @@
 class Receipt {
   constructor(receiptItems = []) {
-    
+
     let total = 0;
     let savedTotal = 0;
 
