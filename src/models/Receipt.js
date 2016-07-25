@@ -28,10 +28,9 @@ class Receipt {
 
     let receiptItemsText = receipt.receiptItems
       .map(receiptItem => {
-        const cartItem = receiptItem.cartItem;
-        return `名称：${cartItem.item.name}，\
-数量：${cartItem.count}${cartItem.item.unit}，\
-单价：${formatMoney(cartItem.item.price)}(元)，\
+        return `名称：${receiptItem.getName()}，\
+数量：${receiptItem.getCount()}${receiptItem.getUnit()}，\
+单价：${formatMoney(receiptItem.getPrice())}(元)，\
 小计：${formatMoney(receiptItem.subtotal)}(元)`;
       })
       .join('\n');
