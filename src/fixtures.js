@@ -14,7 +14,7 @@ function loadAllItems() {
 
 function loadPromotions() {
   return [
-    new Promotions('BUY_TWO_GET_ONE_FREE',['ITEM000000', 'ITEM000001', 'ITEM000005'])
+    new Promotion('BUY_TWO_GET_ONE_FREE',['ITEM000000', 'ITEM000001', 'ITEM000005'])
   ];
 }
 
