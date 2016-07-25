@@ -17,7 +17,7 @@ class ReceiptItems {
   getCount(){
     return this.cartItem.count;
   }
-  
+
   static buildReceiptItems(cartItems, allPromotions) {
 
     const discount = (count, price, promotionType) => {
