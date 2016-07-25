@@ -5,7 +5,7 @@ class ReceiptItems {
     this.subtotal = subtotal;
   }
 
-  buildReceiptItems(cartItems, allPromotions) {
+  static buildReceiptItems(cartItems, allPromotions) {
 
     const discount = (count, price, promotionType) => {
 
