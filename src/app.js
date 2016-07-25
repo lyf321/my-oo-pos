@@ -1,5 +1,6 @@
 const fixture = require('./fixtures');
 const CartItem = require('./models/CartItem');
+const Receipt = require('./models/Receipt')
 const loadAllItems = fixture.loadAllItems;
 const loadPromotions = fixture.loadPromotions;
 
