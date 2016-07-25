@@ -1,6 +1,6 @@
 const fixture = require('./fixtures');
 const CartItem = require('./models/CartItem');
-const Receipt = require('./models/Receipt')
+const ReceiptItems = require('./models/ReceiptItems');
 const loadAllItems = fixture.loadAllItems;
 const loadPromotions = fixture.loadPromotions;
 
@@ -26,7 +26,7 @@ function buildReceiptItems(cartItems, allPromotions) {
 
     const {saved, subtotal} = discount(cartItem.count, cartItem.item.price, promotionType);
 
-    return {cartItem, saved, subtotal};
+    return new ReceiptItems(cartItem,saved,subtotal);
   });
 }
 
