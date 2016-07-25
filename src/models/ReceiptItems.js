@@ -1,4 +1,4 @@
-class Receipt {
+class ReceiptItems {
   constructor(cartItem, saved, subtotal) {
     this.cartItem = cartItem;
     this.saved = saved;
@@ -7,5 +7,5 @@ class Receipt {
   
 }
 
-module.exports = Receipt;
+module.exports = ReceiptItems;
 
