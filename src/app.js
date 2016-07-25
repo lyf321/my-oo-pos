@@ -1,6 +1,7 @@
 const fixture = require('./fixtures');
 const CartItem = require('./models/CartItem');
 const ReceiptItems = require('./models/ReceiptItems');
+const Receipt = require('./models/Receipt');
 const loadAllItems = fixture.loadAllItems;
 const loadPromotions = fixture.loadPromotions;
 
@@ -61,7 +62,7 @@ function buildReceipt(receiptItems) {
     savedTotal += receiptItem.saved;
   }
 
-  return {receiptItems, total, savedTotal}
+  return new Receipt(receiptItems,total,savedTotal);
 }
 
 function buildReceiptText(receipt) {

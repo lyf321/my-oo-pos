@@ -6,4 +6,4 @@ class Receipt{
   }
 }
 
-modules.exports = Receipt;
+module.exports = Receipt;
